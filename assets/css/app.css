@@ -102,9 +102,73 @@ textarea {
 select {
   width: 100%; }
 
-/**** HELPERS ****/
+/******* HELPERS *******/
 .mar-left {
   margin-left: 0; }
 
 .mar-right {
   margin-right: 0; }
+
+/******* VARIABLES *******/
+/******* HEADER*******/
+.main-nav {
+  display: table;
+  width: 100%; }
+  .main-nav header .logo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 10%;
+    padding-top: 20px; }
+    .main-nav header .logo a {
+      padding-left: 20px; }
+  .main-nav header .navigation {
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%; }
+    .main-nav header .navigation nav.main {
+      display: table;
+      margin-left: 50px; }
+      .main-nav header .navigation nav.main ul li {
+        display: inline-block;
+        float: left;
+        font-family: 'Roboto';
+        font-weight: 500;
+        text-transform: uppercase;
+        border-right: 1px solid #f3f3f3;
+        font-size: 14px;
+        padding: 20px; }
+        .main-nav header .navigation nav.main ul li:last-child {
+          border-right: none; }
+        .main-nav header .navigation nav.main ul li.active a {
+          color: #59a3ff; }
+        .main-nav header .navigation nav.main ul li a {
+          color: #444444; }
+          .main-nav header .navigation nav.main ul li a:hover {
+            color: #c4c4c4; }
+  .main-nav header .wrp-tickets {
+    display: table-cell;
+    vertical-align: middle;
+    width: 20%; }
+    .main-nav header .wrp-tickets .select-pais {
+      display: table-cell;
+      vertical-align: middle; }
+    .main-nav header .wrp-tickets .boletos {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 20px; }
+      .main-nav header .wrp-tickets .boletos input[type="button"] {
+        background: #ff0000;
+        -webkit-appearance: none;
+        outline: none;
+        border: none;
+        color: #FFFFFF;
+        border-radius: 4px;
+        padding: 17px 21px 17px 21px;
+        -webkit-box-shadow: inset 40px 49px 69px -110px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 40px 49px 69px -110px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 40px 49px 69px -110px rgba(0, 0, 0, 0.4); }
+      .main-nav header .wrp-tickets .boletos input[type="button"]:focus {
+        outline: none; }
+
+.agenda {
+  background: #eeeeee; }

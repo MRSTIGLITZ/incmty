@@ -1,32 +1,36 @@
 {% block content %} 
-    <div class="row mar-left mar-right">
+<div class="main-nav">
       <div class="large-12 columns">
         <header>
           <div class="logo">
-            <img src="assets/img/inc_logo.jpg" alt="logo">
+            <a href="#"><img src="assets/img/inc_logo.jpg" alt="logo"></a>
           </div>
-          <nav class="main">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Speakers</a></li>
-              <li><a href="#">Trade Show</a></li>
-              <li><a href="#">Convocatorias</a></li>
-              <li><a href="#">Noticias</a></li>
-              <li><a href="#">Network</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+          <div class="navigation">
+            <nav class="main">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Speakers</a></li>
+                <li><a href="#">Trade Show</a></li>
+                <li><a href="#">Convocatorias</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Network</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+              </nav>
+            </div>
             <div class="wrp-tickets">
-              <select name="pais" id="pais">
-                <option value="Mexico">Mexico</option>
+              <div class="select-pais">
+                <select name="pais" id="pais">
+                <option value="Mexico" data-imagesrc="assets/img/flag.jpg"></option>
               </select>
+              </div>
               <div class="boletos">
                 <input type="button" value="BOLETOS" class="boleto">
               </div>
             </div>
-          </nav>
         </header>
       </div>
-    </div><!--End of Header-->
+  </div><!--End of Main-Header-->
     <div class="agenda">
       <div class="row">
         <div class="large-12 columns text-center">
@@ -49,16 +53,188 @@
     </div><!--End of row tabs-date-->
     <div class="row">
       <div class="large-12 columns">
+        <div class="filtros">
+          <ul>
+            <li>Fitrar: por:</li>
+            <li>
+              <select name="tipo" id="tipo">
+                <option value="tipo">tipo</option>
+              </select>
+            </li>
+            <li>
+              <select name="tema" id="tema">
+                <option value="tema">tema</option>
+              </select>
+            </li>
+            <li>
+              <select name="recinto" id="recinto">
+                <option value="recinto">recinto</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
         <table id="agenda" class="display" cellspacing="0" width="100%">
           <tbody>
             <tr><td>sponsored</td></tr>
-            <tr>
+           <tr>
               <td>8:00 - 9:00</td>
               <td><span class="te">te</span></td>
               <td>Workshop Design Thinking</td>
               <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Lic Danielha María Pereyda Pierre</span><br>
                 <ul>
                   <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Taller</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>10:00 - 11:00</td>
+              <td><span class="me">te</span></td>
+              <td>Tu negocio desde donde quieras - <br>Utilización del IPad para manejar tu<br> emprendimiento</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Ronald T Azuma</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 205</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Conferencia</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>12:00 - 13:30</td>
+              <td><span class="me">act</span></td>
+              <td>De Emprendedora a Empresaria</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Maria Ariza</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Meetup</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr><td>8:00 am</td></tr>
+            <tr>
+              <td>8:00 - 9:00</td>
+              <td><span class="me">te</span></td>
+              <td>Workshop Design Thinking</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Lic Danielha María Pereyda Pierre</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Taller</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:00 - 9:00</td>
+              <td><span class="me">me</span></td>
+              <td>Tu negocio desde donde quieras - <br>Utilización del IPad para manejar tu<br> emprendimiento</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Ronald T Azuma</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 205</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Conferencia</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:00 - 9:30</td>
+              <td><span class="me">act</span></td>
+              <td>Tu negocio desde donde quieras - <br>Utilización del IPad para manejar tu<br> emprendimiento</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Maria Ariza</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Meetup</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:00 - 11:00</td>
+              <td><span class="me">nd</span></td>
+              <td>Impacto global de las empresas:<br> igualdad y equidad de género</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Yolanda Castillo</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón G</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Cintermex</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Panel</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:00 - 11:00</td>
+              <td><span class="me">m</span></td>
+              <td>Workshop Design Thinking</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Lic. Danielha María Pereyda Pierre</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Taller</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:00 - 11:00</td>
+              <td><span class="me">mc</span></td>
+              <td>Tu negocio desde donde quieras - <br>Utilización del IPad para manejar tu<br> emprendimiento</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Ronald T Azuma</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 205</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Conferencia</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:30 - 11:30</td>
+              <td><span class="me">act</span></td>
+              <td>De Emprendedora a Empresaria</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: María Ariza</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Meetup</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>8:00 - 1:00</td>
+              <td><span class="me">nd</span></td>
+              <td>Impacto global de las empresas:<br>igualdad y equidad de género</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Yolanda Castillo</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón G</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Cintermex</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Panel</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr><td>9:00 am</td></tr>
+            <tr>
+               <td>9:00 - 9:00</td>
+              <td><span class="me">te</span></td>
+              <td>Workshop Design Thinking</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Lic. Danielha María Pereyda Pierre</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 203</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Taller</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+               <td>9:00 - 10:00</td>
+              <td><span class="me">me</span></td>
+              <td>Tu negocio desde donde quieras - <br>Utilización del IPad para manejar tu<br> emprendimiento</td>
+              <td><span><img src="assets/img/user.jpg" alt="user-icon">Expositor: Ronald T Azuma</span><br>
+                <ul>
+                  <li><span><img src="assets/img/location.jpg" alt="loation-icon">Recinto: Salón 205</span></li>
+                  <li><span><img src="assets/img/location.jpg" alt="type-icon">Sede: Campus mty</span></li>
+                  <li><span><img src="assets/img/type.jpg" alt="type-icon">Tipo: Conferencia</span></li>
                 </ul>
               </td>
             </tr>

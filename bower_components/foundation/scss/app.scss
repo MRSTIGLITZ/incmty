@@ -1,12 +1,121 @@
 @charset "UTF-8";
 @import "foundation/components/global.scss";
 
-/**** HELPERS ****/
+/******* HELPERS *******/
 .mar-left{
 	margin-left: 0;
 }
 
-.mar-right{
+.mar-right{;
+	$span-te: #4cc6b7;
+
 	margin-right: 0;
 }
 
+/******* VARIABLES *******/
+$snow: #FFFFFF;
+$button-red: #ff0000;
+$line-gray: #f3f3f3;
+$black-ops: #000000;
+$tr-gray: #eeeeee;
+$sky-blue: #59a3ff;
+$text-gray: #444444;
+$filter-text: #84878a;
+$tr-red: #e5364e;
+$span-te: #4cc6b7;
+$span-me: #5193eb;
+$span-act: #9c7613;
+$span-md: #f065de;
+$span-m: #abd81b;
+$span-mc: #f1830e;
+$sponsored-bg: #fffde4;
+/******* HEADER*******/
+
+.main-nav{
+	display: table;
+	width: 100%;
+	header{
+			
+		.logo{
+			display: table-cell;
+			vertical-align: middle;
+			width: 10%;
+			padding-top: 20px;
+			a{
+				padding-left: 20px;
+			}
+		}
+		.navigation{
+			display: table-cell;
+			vertical-align: middle;
+			width: 70%;
+			nav.main{
+				display: table;
+				margin-left: 50px;
+				ul{
+					li{
+						display: inline-block;
+						float: left;
+						font-family: 'Roboto';
+						font-weight: 500;
+						text-transform: uppercase;
+						border-right: 1px solid $line-gray;
+						font-size: 14px;
+						padding: 20px;
+						&:last-child{
+							border-right: none;
+						}
+							&.active{
+								a{
+									color: $sky-blue;
+								}
+							}
+						a{
+							color: $text-gray;
+							&:hover{
+								color: lighten($text-gray, 50%);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.wrp-tickets{
+			display: table-cell;
+			vertical-align: middle;
+			width: 20%;
+				.select-pais{
+					display: table-cell;
+					vertical-align: middle;
+					select#pais{
+					}
+				}
+					.boletos{
+					display: table-cell;
+					vertical-align: middle;
+					padding-left: 20px;
+					input[type="button"]{
+						background: $button-red;
+						-webkit-appearance: none;
+						
+						 outline: none;
+						 border: none;
+						 color: $snow;
+						 border-radius: 4px;
+						 padding: 17px 21px 17px 21px;
+						 -webkit-box-shadow: inset 40px 49px 69px -110px rgba(0,0,0,0.4);
+						-moz-box-shadow: inset 40px 49px 69px -110px rgba(0,0,0,0.4);
+						box-shadow: inset 40px 49px 69px -110px rgba(0,0,0,0.4);
+					}
+					input[type="button"]:focus {
+					  outline: none;
+					}
+				}
+		}
+	}
+}
+
+.agenda{
+	background: $tr-gray;
+}
