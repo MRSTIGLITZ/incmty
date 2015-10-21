@@ -109,7 +109,25 @@ select {
 .mar-right {
   margin-right: 0; }
 
+hr {
+  margin-top: 0; }
+
 /******* VARIABLES *******/
+/******* RESPONSIVE NAV *******/
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .responsive-icon {
+    display: none; } }
+
+.left-off-canvas-menu {
+  background: #f3f3f3; }
+
+ul.off-canvas-list li a {
+  color: #444444;
+  font-family: "Roboto", Arial, Helvetica;
+  border-bottom: 1px solid #444444; }
+  ul.off-canvas-list li a:hover {
+    background: #c4c4c4; }
+
 /******* HEADER*******/
 .main-nav {
   display: table;
@@ -121,6 +139,8 @@ select {
     padding-top: 20px; }
     .main-nav header .logo a {
       padding-left: 20px; }
+      .main-nav header .logo a img {
+        max-width: 134px; }
   .main-nav header .navigation {
     display: table-cell;
     vertical-align: middle;
@@ -131,7 +151,7 @@ select {
       .main-nav header .navigation nav.main ul li {
         display: inline-block;
         float: left;
-        font-family: 'Roboto';
+        font-family: 'Roboto', Arial, Helvetica;
         font-weight: 500;
         text-transform: uppercase;
         border-right: 1px solid #f3f3f3;
@@ -171,4 +191,83 @@ select {
         outline: none; }
 
 .agenda {
-  background: #eeeeee; }
+  background: #eeeeee;
+  margin-top: 15px; }
+  .agenda h1 {
+    font-family: "Roboto", Arial, Helvetica;
+    padding-top: 64px; }
+  .agenda p {
+    font-family: "Roboto", Arial, Helvetica; }
+
+.tabs-date {
+  text-align: center;
+  margin-top: 47px; }
+  .tabs-date ul {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 10%; }
+    .tabs-date ul li {
+      float: left;
+      padding-right: 145px;
+      text-transform: uppercase;
+      font-family: "Roboto", Arial, Helvetica;
+      position: relative; }
+      .tabs-date ul li.active a {
+        color: #59a3ff; }
+      .tabs-date ul li.active span:after {
+        position: absolute;
+        content: '';
+        width: 50%;
+        border-bottom: 2px solid #59a3ff;
+        bottom: -8px;
+        right: 123px; }
+      .tabs-date ul li a {
+        color: #444444; }
+
+/******* FILTERS *******/
+.filtros ul li {
+  display: inline-block;
+  float: left;
+  width: 150px;
+  padding-right: 25px; }
+  .filtros ul li.filtro-txt {
+    text-transform: uppercase;
+    font-family: "Roboto", Arial, Helvetica;
+    color: #444444;
+    padding-top: 7px; }
+  .filtros ul li select {
+    background-color: #FFFFFF;
+    border: 1px solid #84878a; }
+
+/******* TABLE *******/
+table#agenda tr {
+  background-color: #FFFFFF; }
+  table#agenda tr.sponsored {
+    background-color: #e5364e; }
+    table#agenda tr.sponsored td {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-family: "Roboto", Arial, Helvetica;
+      font-size: 18px; }
+  table#agenda tr.color-row {
+    background-color: #fffde4; }
+  table#agenda tr td ul li {
+    list-style: none;
+    display: inline-block;
+    float: left; }
+
+/******* MEDIA QUERIES *******/
+@media only screen and (min-width: 1026px) and (max-width: 1275px) {
+  .main-nav header .navigation nav.main ul li {
+    font-size: 11px;
+    padding: 12px; } }
+@media only screen and (min-width: 320px) and (max-width: 1026px) {
+  .main-nav header .navigation {
+    display: none; }
+
+  .main-nav header .wrp-tickets {
+    width: 1%; } }
+@media only screen and (min-width: 64.063em) {
+  .responsive-icon {
+    display: none; } }

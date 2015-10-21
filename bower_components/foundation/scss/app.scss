@@ -12,6 +12,10 @@
 	margin-right: 0;
 }
 
+hr{
+	margin-top: 0;
+}
+
 /******* VARIABLES *******/
 $snow: #FFFFFF;
 $button-red: #ff0000;
@@ -29,8 +33,32 @@ $span-md: #f065de;
 $span-m: #abd81b;
 $span-mc: #f1830e;
 $sponsored-bg: #fffde4;
-/******* HEADER*******/
 
+/******* RESPONSIVE NAV *******/
+.responsive-icon{
+	@media #{$large-only} { 
+		display:none;
+		}
+}
+
+.left-off-canvas-menu{
+	background: $line-gray;
+}
+
+ul.off-canvas-list{
+	li{
+		a{
+			color: $text-gray;
+			font-family: "Roboto", Arial, Helvetica;
+			border-bottom: 1px solid $text-gray;
+			&:hover{
+				background: lighten($text-gray, 50%);
+			}
+		}
+	}	
+}
+
+/******* HEADER*******/
 .main-nav{
 	display: table;
 	width: 100%;
@@ -43,6 +71,9 @@ $sponsored-bg: #fffde4;
 			padding-top: 20px;
 			a{
 				padding-left: 20px;
+				img{
+					max-width: 134px;
+				}
 			}
 		}
 		.navigation{
@@ -56,7 +87,7 @@ $sponsored-bg: #fffde4;
 					li{
 						display: inline-block;
 						float: left;
-						font-family: 'Roboto';
+						font-family: 'Roboto', Arial, Helvetica;
 						font-weight: 500;
 						text-transform: uppercase;
 						border-right: 1px solid $line-gray;
@@ -118,4 +149,122 @@ $sponsored-bg: #fffde4;
 
 .agenda{
 	background: $tr-gray;
+	margin-top: 15px;
+	h1{
+		font-family: "Roboto", Arial, Helvetica;
+		padding-top: 64px;
+	}
+	p{
+		font-family: "Roboto", Arial, Helvetica;
+	}
 }
+
+.tabs-date{
+	text-align: center;
+	margin-top: 47px;
+	ul{
+		list-style: none;
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: 10%;
+		li{	
+			float: left;
+			padding-right: 145px;
+			text-transform: uppercase;
+			font-family: "Roboto", Arial, Helvetica;
+			position: relative;
+			&.active{
+				a{
+					color: $sky-blue;
+				}
+				span:after{
+					    position: absolute;
+					    content: '';
+					    width: 50%;
+					    border-bottom: 2px solid #59a3ff;
+					    bottom: -8px;
+    					    right: 123px;
+				}
+			}
+			a{
+				color: $text-gray;
+			}
+		}
+	}
+}
+
+/******* FILTERS *******/
+.filtros{
+	ul{
+	
+		li{
+			display: inline-block;
+			float: left;
+			width: 150px;
+			padding-right: 25px;
+			&.filtro-txt{
+				text-transform: uppercase;
+				font-family: "Roboto", Arial, Helvetica;
+				color: $text-gray;
+				padding-top: 7px;
+			}
+			select{
+				background-color: #FFFFFF;
+				border: 1px solid #84878a;
+			}
+		}
+	}
+}
+
+/******* TABLE *******/
+table#agenda{
+	tr{
+		background-color: $snow;
+		&.sponsored{
+			background-color: $tr-red;
+			td{
+				color: $snow;
+				text-transform: uppercase;
+				font-family: "Roboto", Arial, Helvetica;
+				font-size: 18px;
+			}
+		}
+		&.color-row{
+			background-color: $sponsored-bg;
+		}
+		td{
+			ul{
+				li{
+					list-style: none;
+					display: inline-block;
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+/******* MEDIA QUERIES *******/
+
+@media only screen and (min-width: 1026px) and (max-width: 1275px){
+	.main-nav header .navigation nav.main ul li{
+		font-size: 11px;
+		padding: 12px;
+	}
+
+ }
+
+ @media only screen and (min-width: 320px) and (max-width: 1026px){
+	.main-nav header .navigation{
+		display: none;
+	}
+	.main-nav header .wrp-tickets{
+		width: 1%;
+	}
+
+ }
+@media only screen and (min-width: 64.063em) {
+	.responsive-icon{
+		display: none;
+	}
+ }
