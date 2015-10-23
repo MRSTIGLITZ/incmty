@@ -228,6 +228,24 @@ table#agenda{
 	tr{
 		background-color: $snow;
 		border-bottom: 1px solid $border-table !important;
+		&.dia{
+			background-color: $tr-red;
+			td{
+				color: $snow;
+				text-transform: uppercase;
+				font-family: "Roboto", Arial, Helvetica;
+				font-size: 18px;
+				&.hidetd{
+					color: $tr-red;
+				}
+				&.dia-width{
+					width: 145px;
+				}
+			}
+			&.hidetd{
+					color: $tr-red;
+				}
+		}
 		&.sponsored{
 			background-color: $tr-red;
 			td{
@@ -349,6 +367,30 @@ table#agenda{
 				}
 			}
 		}
+	}
+}
+
+/******* TOOLTIP *******/
+.tooltip{
+	border-radius: 4px;
+	background-color: #666666;
+	span{
+			&.tool-te{
+			padding: 3px 12px;
+			display: inline-block;
+			background: $span-me;
+			text-transform: uppercase;
+		}
+		&.tool-letters{
+			color: $snow;
+			font-family: "Raleway", Arial, Helvetica;
+			font-size: 12px;
+			display: inline-block;
+			padding-left: 10px;
+		}
+	}
+	>.nub{
+		border-color: transparent transparent #666666;
 	}
 }
 

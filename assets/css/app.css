@@ -247,6 +247,19 @@ table#agenda {
   table#agenda tr {
     background-color: #FFFFFF;
     border-bottom: 1px solid #bbbbbb !important; }
+    table#agenda tr.dia {
+      background-color: #e5364e; }
+      table#agenda tr.dia td {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-family: "Roboto", Arial, Helvetica;
+        font-size: 18px; }
+        table#agenda tr.dia td.hidetd {
+          color: #e5364e; }
+        table#agenda tr.dia td.dia-width {
+          width: 145px; }
+      table#agenda tr.dia.hidetd {
+        color: #e5364e; }
     table#agenda tr.sponsored {
       background-color: #e5364e; }
       table#agenda tr.sponsored td {
@@ -337,6 +350,24 @@ table#agenda {
       font-family: "Roboto", Arial, Helvetica; }
       table#agenda tr td ul li span img {
         padding-right: 10px; }
+
+/******* TOOLTIP *******/
+.tooltip {
+  border-radius: 4px;
+  background-color: #666666; }
+  .tooltip span.tool-te {
+    padding: 3px 12px;
+    display: inline-block;
+    background: #4cc6b7;
+    text-transform: uppercase; }
+  .tooltip span.tool-letters {
+    color: #FFFFFF;
+    font-family: "Raleway", Arial, Helvetica;
+    font-size: 12px;
+    display: inline-block;
+    padding-left: 10px; }
+  .tooltip > .nub {
+    border-color: transparent transparent #666666; }
 
 /******* MODAL *******/
 .reveal-modal, dialog {
