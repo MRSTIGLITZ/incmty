@@ -224,6 +224,8 @@ ul.off-canvas-list li a {
         right: 123px; }
       .tabs-date ul li a {
         color: #444444; }
+        .tabs-date ul li a:hover {
+          color: #c4c4c4; }
 
 /******* FILTERS *******/
 .filtros ul li {
@@ -334,8 +336,10 @@ table#agenda {
       color: #444444;
       font-size: 14px;
       font-family: "Roboto", Arial, Helvetica; }
-      table#agenda tr td.exp span img {
+      table#agenda tr td.exp span i {
         padding-right: 10px; }
+        table#agenda tr td.exp span i.user {
+          color: #81ba45; }
       table#agenda tr td.exp span.person {
         margin-left: 15px;
         margin-bottom: 5px;
@@ -348,8 +352,12 @@ table#agenda {
       color: #444;
       font-size: 14px;
       font-family: "Roboto", Arial, Helvetica; }
-      table#agenda tr td ul li span img {
+      table#agenda tr td ul li span i {
         padding-right: 10px; }
+        table#agenda tr td ul li span i.bookmark {
+          color: #4cc6b7; }
+        table#agenda tr td ul li span i.marker {
+          color: #5193eb; }
 
 /******* TOOLTIP *******/
 .tooltip {
@@ -391,15 +399,16 @@ table#agenda {
       float: left;
       border-right: 1px solid #DDDDDD;
       padding-right: 7px;
-      padding-left: 2px; }
+      padding-left: 5px; }
       .reveal-modal .panels ul li:last-child, dialog .panels ul li:last-child {
         border-right: none; }
       .reveal-modal .panels ul li span, dialog .panels ul li span {
         font-size: 12px;
         color: #444444;
         font-family: "Roboto", Arial, Helvetica; }
-        .reveal-modal .panels ul li span img, dialog .panels ul li span img {
-          padding-right: 5px; }
+        .reveal-modal .panels ul li span i, dialog .panels ul li span i {
+          padding-right: 5px;
+          color: #444444; }
       .reveal-modal .panels ul li span.special-text, dialog .panels ul li span.special-text {
         color: #81ba45; }
   .reveal-modal .texto-panels p, dialog .texto-panels p {

@@ -193,6 +193,9 @@ ul.off-canvas-list{
 			}
 			a{
 				color: $text-gray;
+				&:hover{
+					color: lighten($text-gray, 50%);
+				}
 			}
 		}
 	}
@@ -340,8 +343,11 @@ table#agenda{
 					color: $text-gray;
 					font-size: 14px;
 					font-family: "Roboto", Arial, Helvetica;
-					img{
+					i{
 						padding-right: 10px;
+						&.user{
+							color: $green-line;
+						}
 					}
 					&.person{
 						margin-left: 15px;
@@ -360,8 +366,14 @@ table#agenda{
 				          font-size: 14px;
 				          font-family: "Roboto", Arial, Helvetica;
 					span{
-						img{
+						i{
 							padding-right: 10px;
+							&.bookmark{
+								color: $span-me;
+							}
+							&.marker{
+								color: $span-te;
+							}
 						}
 					}
 				}
@@ -421,7 +433,7 @@ table#agenda{
 				float: left;
 				border-right: 1px solid #DDDDDD;
 				padding-right: 7px;
-				padding-left: 2px;
+				padding-left: 5px;
 				&:last-child{
 					border-right: none;
 				}
@@ -429,8 +441,9 @@ table#agenda{
 					font-size: 12px;
 					color: $text-gray;
 					font-family: "Roboto", Arial, Helvetica;
-					img{
+					i{
 						padding-right: 5px;
+						color: $text-gray;
 					}
 				}
 				span.special-text{
